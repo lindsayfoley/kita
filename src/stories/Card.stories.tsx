@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Card } from "@kita/components/molecules/Card";
 
 const meta = {
-  title: "Atoms/Card",
+  title: "Molecules/Card",
   component: Card,
   parameters: {
     layout: "centered",

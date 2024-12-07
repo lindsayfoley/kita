@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./Card.module.css";
 
 type ValueOf<T> = T[keyof T];
@@ -12,7 +13,7 @@ const BorderRadiusSize = {
   large: "large",
 } as const;
 
-interface CardProps {
+export interface CardProps {
   header: React.ReactNode;
   body: React.ReactNode;
   theme?: ValueOf<typeof Theme>;
