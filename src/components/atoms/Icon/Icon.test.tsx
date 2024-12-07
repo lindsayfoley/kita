@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import Icon from "./Icon";
 
 const iconName = "magnifyingGlass";
@@ -27,5 +27,12 @@ describe("Icon", () => {
     const chosenColour = "pink";
     render(<Icon name={iconName} colour={chosenColour} />);
     expect(screen.getByTestId(iconName)).toHaveAttribute("fill", chosenColour);
+  });
+
+  it("Should fire an onClick when passed in via props", () => {
+    const handleClick = jest.fn();
+    render(<Icon name={iconName} onClick={handleClick} />);
+    fireEvent.click(screen.getByTestId(iconName));
+    expect(handleClick).toHaveBeenCalledTimes(1);
   });
 });
