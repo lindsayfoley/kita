@@ -3,6 +3,10 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Card } from "@kita/components/molecules/Card";
 import { Icon } from "@kita/components/atoms/Icon";
 import { IconListGroup } from "@kita/components/molecules/IconListGroup";
+import {
+  defaultStoryList,
+  subMenuList,
+} from "@kita/components/molecules/Card/mockdata";
 
 const meta = {
   title: "Molecules/Card",
@@ -27,19 +31,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const list = [
-  {
-    primaryIcon: <Icon name="documentText" />,
-    text: "readme",
-    secondaryIcon: <Icon name="ellipsis" />,
-  },
-  {
-    primaryIcon: <Icon name="pythonColoured" />,
-    text: "main.py",
-    secondaryIcon: <Icon name="ellipsis" />,
-  },
-];
-
 export const Default: Story = {
   args: {
     theme: Card.Theme.dark,
@@ -48,7 +39,7 @@ export const Default: Story = {
         <h4>Lesson 3: Morse Code</h4> <Icon name="plus" />
       </>
     ),
-    body: <IconListGroup list={list} />,
+    body: <IconListGroup list={defaultStoryList} />,
     borderRadiusSize: Card.BorderRadiusSize.large,
   },
 };
@@ -63,5 +54,13 @@ export const StudentProjects: Story = {
     ),
     body: <span>No lesson projects</span>,
     borderRadiusSize: Card.BorderRadiusSize.large,
+  },
+};
+
+export const SubMenu: Story = {
+  args: {
+    theme: Card.Theme.dark,
+    body: <IconListGroup list={subMenuList} />,
+    borderRadiusSize: Card.BorderRadiusSize.small,
   },
 };

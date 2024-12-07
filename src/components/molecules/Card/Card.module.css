@@ -1,5 +1,4 @@
 .container {
-    padding: 20px 15px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #B3B3B2;
 }
@@ -34,9 +33,11 @@
 }
 
 .border-radius-small {
+    padding: 15px;
     border-radius: 4px;
 }
 
 .border-radius-large {
+    padding: 20px;
     border-radius: 10px;
 }

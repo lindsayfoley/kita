@@ -13,7 +13,7 @@ const BorderRadiusSize = {
 } as const;
 
 export interface CardProps {
-  header: React.ReactNode;
+  header?: React.ReactNode;
   body: React.ReactNode;
   theme?: ValueOf<typeof Theme>;
   borderRadiusSize?: ValueOf<typeof BorderRadiusSize>;
@@ -26,8 +26,12 @@ const Card = ({ body, header, theme, borderRadiusSize }: CardProps) => {
         borderRadiusSize && styles[`border-radius-${borderRadiusSize}`]
       }`}
     >
-      <div className={styles.header}>{header}</div>
-      <hr className={styles.divider} />
+      {header && (
+        <>
+          <div className={styles.header}>{header}</div>
+          <hr className={styles.divider} />
+        </>
+      )}
       <div className={styles.body}>{body}</div>
     </article>
   );
