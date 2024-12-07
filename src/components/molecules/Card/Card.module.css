@@ -1,6 +1,6 @@
 .container {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #B3B3B2;
+    color: var(--mid-grey);
 }
 
 .header {
@@ -19,17 +19,17 @@
 
 .divider {
     height: 1px;
-    background: #3F3F3F;
+    background: var(--dark-grey);
     border: 0;
     margin: 10px 0;
 }
 
 .theme-dark {
-    background-color: #1B2438;
+    background-color: var(--theme-blue);
 }
 
 .theme-highlight {
-    background-color: #2A1A38;
+    background-color: var(--theme-purple);
 }
 
 .border-radius-small {

@@ -3,7 +3,7 @@
     justify-content: space-between;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
-    color: #B2B2B2;
+    color: var(--mid-grey);
 
     svg {
         vertical-align: bottom;
@@ -11,18 +11,18 @@
 }
 
 .theme-complete {
-    color: #267A2E;
+    color: var(--success-green);
 }
 
 .theme-warning {
-    color: #AD1B1A;
+    color: var(--warning-red);
 }
 
 .theme-focus {
-    color: #FFFFFF;
+    color: var(--white);
 }
 
 .theme-highlight {
-    color: #1A80CA;
+    color: var(--highlight-blue);
 }
 
