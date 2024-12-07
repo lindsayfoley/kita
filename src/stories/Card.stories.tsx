@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Card } from "@kita/components/molecules/Card";
+import { Icon } from "@kita/components/atoms/Icon";
 
 const meta = {
   title: "Molecules/Card",
@@ -31,7 +32,11 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     theme: Card.Theme.dark,
-    header: <h4>Student Projects</h4>,
+    header: (
+      <>
+        <h4>Student Projects</h4> <Icon name="magnifyingGlass" />
+      </>
+    ),
     body: <span>No lesson projects</span>,
     borderRadiusSize: Card.BorderRadiusSize.large,
   },
