@@ -8,8 +8,8 @@ describe("Icon", () => {
   it("Should render an SVG with default setttings when using a valid icon name", () => {
     render(<Icon name={iconName} />);
     expect(screen.getByTestId(iconName)).toBeVisible();
-    expect(screen.getByTestId(iconName)).toHaveAttribute("width", "18");
-    expect(screen.getByTestId(iconName)).toHaveAttribute("height", "18");
+    expect(screen.getByTestId(iconName)).toHaveAttribute("width", "20");
+    expect(screen.getByTestId(iconName)).toHaveAttribute("height", "20");
     expect(screen.getByTestId(iconName)).toHaveAttribute(
       "fill",
       "currentColor"
