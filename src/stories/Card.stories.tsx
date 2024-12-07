@@ -6,9 +6,6 @@ import { Icon } from "@kita/components/atoms/Icon";
 const meta = {
   title: "Molecules/Card",
   component: Card,
-  parameters: {
-    layout: "centered",
-  },
   argTypes: {
     theme: {
       options: Object.keys(Card.Theme),

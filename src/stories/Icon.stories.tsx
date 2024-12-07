@@ -6,9 +6,6 @@ import icons from "@kita/assets";
 const meta = {
   title: "Atoms/Icon",
   component: Icon,
-  parameters: {
-    layout: "centered",
-  },
   argTypes: {
     name: {
       options: Object.keys(icons),
