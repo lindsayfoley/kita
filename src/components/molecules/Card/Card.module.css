@@ -1,16 +1,17 @@
 .container {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: var(--mid-grey);
+    padding: 20px;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     font-size: 16px;
+}
 
-    h4 {
-        margin: 0;
-    }
+.header h4 {
+    margin: 0;
 }
 
 .body {
@@ -38,6 +39,5 @@
 }
 
 .border-radius-large {
-    padding: 20px;
     border-radius: 10px;
 }
