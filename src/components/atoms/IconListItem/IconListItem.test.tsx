@@ -25,4 +25,12 @@ describe("IconListItem", () => {
     render(<IconListItem {...props} secondaryIcon={secondaryIcon} />);
     expect(screen.getByTestId(secondaryIconDataTestId)).toBeVisible();
   });
+
+  it.each(Object.values(IconListItem.Theme))(
+    "Should return expected theme class for %s",
+    (theme) => {
+      render(<IconListItem {...props} theme={theme} />);
+      expect(screen.getByTestId("IconListItem")).toHaveClass(`theme-${theme}`);
+    }
+  );
 });

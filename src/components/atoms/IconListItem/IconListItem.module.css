@@ -3,9 +3,26 @@
     justify-content: space-between;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
+    color: #B2B2B2;
 
     svg {
         vertical-align: bottom;
     }
+}
+
+.theme-complete {
+    color: #267A2E;
+}
+
+.theme-warning {
+    color: #AD1B1A;
+}
+
+.theme-focus {
+    color: #FFFFFF;
+}
+
+.theme-highlight {
+    color: #1A80CA;
 }
 
