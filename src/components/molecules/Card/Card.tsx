@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Card.module.css";
-
-type ValueOf<T> = T[keyof T];
+import { ValueOf } from "@kita/types/utils";
 
 const Theme = {
   dark: "dark",
