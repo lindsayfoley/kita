@@ -11,7 +11,7 @@ interface IconProps {
 
 const Icon = ({
   name,
-  size = "18",
+  size = "20",
   colour = "currentColor",
   dataTestId = name,
   onClick,
