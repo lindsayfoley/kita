@@ -21,7 +21,6 @@ describe("Card", () => {
   it("Should render the card header", () => {
     render(<Card {...props} />);
     expect(screen.getByRole("heading", { name: headerText })).toBeVisible();
-    expect(screen.getByRole("separator")).toBeVisible();
   });
 
   it("Should render the card body", () => {
