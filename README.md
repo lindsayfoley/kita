@@ -1,40 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Kita Tech Test
 
-## Getting Started
+Hello 👋 and thank you for giving me the opportunity to work on this tech test! I really enjoyed it, it was refreshing to work on something different from my usual projects, which are mainly components for retail sites. Exploring a UI for EdTech was a nice challenge.
 
-First, run the development server:
+So I got carried away and spent more time on this than planned! I spent about 6 hours coding the components yesterday, and today I spent a couple more hours reviewing everything I’d written, making tweaks, creating the README and putting together an index page to render the components grouped together. Prior to this, I had focused on creating the components in Storybook, so they were built and tested in isolation.
+
+---
+
+## **Technologies Used**
+
+- **Next.js**: Used as the framework for the app
+- **TypeScript**: For type safety and robust code
+- **Storybook**: To develop and document UI components in isolation
+- **React Testing Library**: For writing unit tests
+- **Jest**: For running tests
+- **CSS Modules**: To create reusable, scoped styles
+
+---
+
+## **Running the App Locally**
+
+To start the app in development mode:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app will be available at [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## **Running Storybook**
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+To view the components in isolation:
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run storybook
+```
 
-## Learn More
+The Storybook will be available at [http://localhost:6006](http://localhost:6006)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+## **Running the Tests**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To run the unit tests:
 
-## Deploy on Vercel
+```bash
+npm test
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+## **Implementation Notes**
+
+My main focus was on building out reusable components because the original job spec I saw on LinkedIn mentioned experience with design systems so I wanted to demonstrate this.
+
+I also wanted to:
+
+- Include unit tests using Jest and RTL
+- Leverage Storybook as my preferred method for creating and reviewing components
+- Use CSS Modules for clean/modular styling
+
+---
+
+## **If I Had More Time**
+
+If I’d had more time, I would have:
+
+- Worked more on the index page to componentise it and add more functionality
+- Catered for mobile/small screen views, as I’ve only focused on desktop based on the brief screenshots
+- Built a **Heading** component (atom) to manage all headings across the app
+- Built a **Typography** component (atom) for general text styles, which could be used in components like `ListItem`
+- Wired up pre-commit and pre-push hooks to automatically run the linter and tests
+- Added more test coverage e.g. for the Index page and components I would have used there
+- Added either Storybook docs or a README for each component created
+
+---
+
+Thank you again for the opportunity and looking forward to hearing from you!
