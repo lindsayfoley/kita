@@ -1,19 +1,13 @@
 import React from "react";
+import { IconBaseProps } from "./types";
 
-const Ellipsis = ({
-  size,
-  colour,
-  dataTestId,
-}: {
-  size?: string;
-  colour?: string;
-  dataTestId?: string;
-}) => (
+const Ellipsis = ({ size, colour, dataTestId, ...rest }: IconBaseProps) => (
   <svg
     width={size}
     height={size}
     fill={colour}
     data-testid={dataTestId}
+    {...rest}
     viewBox="0 0 512 512"
     xmlns="http://www.w3.org/2000/svg"
   >

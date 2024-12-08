@@ -1,19 +1,14 @@
 import React from "react";
+import { IconBaseProps } from "./types";
 
-const PythonColoured = ({
-  size,
-  dataTestId,
-}: {
-  size?: string;
-  colour?: string;
-  dataTestId?: string;
-}) => (
+const PythonColoured = ({ size, dataTestId, ...rest }: IconBaseProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     fill="none"
     data-testid={dataTestId}
+    {...rest}
     x="0px"
     y="0px"
     viewBox="0 0 48 48"

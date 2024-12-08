@@ -29,6 +29,11 @@ describe("Icon", () => {
     expect(screen.getByTestId(iconName)).toHaveAttribute("fill", chosenColour);
   });
 
+  it("Should include the aria-hidden attribute", () => {
+    render(<Icon name={iconName} />);
+    expect(screen.getByTestId(iconName)).toHaveAttribute("aria-hidden", "true");
+  });
+
   it("Should fire an onClick when passed in via props", () => {
     const handleClick = jest.fn();
     render(<Icon name={iconName} onClick={handleClick} />);

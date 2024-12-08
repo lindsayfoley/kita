@@ -1,12 +1,9 @@
 import icons from "@kita/assets";
-import React, { useEffect } from "react";
+import { IconBaseProps } from "@kita/assets/types";
+import React from "react";
 
-interface IconProps {
+interface IconProps extends IconBaseProps {
   name: keyof typeof icons;
-  size?: string;
-  colour?: string;
-  dataTestId?: string;
-  onClick?: () => void;
 }
 
 const Icon = ({
@@ -18,13 +15,15 @@ const Icon = ({
 }: IconProps) => {
   const IconComponent = icons[name];
 
-  useEffect(() => {
-    if (onClick) {
-      onClick();
-    }
-  }, [onClick]);
-
-  return <IconComponent size={size} colour={colour} dataTestId={dataTestId} />;
+  return (
+    <IconComponent
+      size={size}
+      colour={colour}
+      dataTestId={dataTestId}
+      onClick={onClick}
+      aria-hidden="true"
+    />
+  );
 };
 
 export default Icon;
