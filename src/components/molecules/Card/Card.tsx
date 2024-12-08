@@ -36,7 +36,7 @@ const Card = ({
       {header && (
         <>
           <div className={styles.header}>{header}</div>
-          <hr className={styles.divider} />
+          <hr className={styles.divider} aria-hidden="true" />
         </>
       )}
       <div className={styles.body}>{body}</div>

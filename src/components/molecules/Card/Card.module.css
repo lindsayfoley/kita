@@ -6,12 +6,14 @@
 }
 
 .header {
+    margin: 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 14px;
 }
 
-.header h4 {
+.header > * {
     margin: 0;
 }
 
