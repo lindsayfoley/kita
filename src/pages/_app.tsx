@@ -1,3 +1,4 @@
+import "@kita/styles/globals.css";
 import "@kita/styles/colours.css";
 import type { AppProps } from "next/app";
 

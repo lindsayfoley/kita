@@ -1,3 +1,17 @@
+.container {
+    background-color: var(--theme-dark);
+    height: 100vh;
+}
+
 .aside {
-    max-width: 300px;
+    max-width: 250px;
+    padding: 10px;
+}
+
+.main {
+   width: calc(100% - 250px);
+}
+
+.home-cards {
+    margin-bottom: 15px;
 }
