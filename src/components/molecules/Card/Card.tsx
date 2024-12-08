@@ -17,14 +17,21 @@ export interface CardProps {
   body: React.ReactNode;
   theme?: ValueOf<typeof Theme>;
   borderRadiusSize?: ValueOf<typeof BorderRadiusSize>;
+  classname?: string;
 }
 
-const Card = ({ body, header, theme, borderRadiusSize }: CardProps) => {
+const Card = ({
+  body,
+  header,
+  theme = Theme.dark,
+  borderRadiusSize = BorderRadiusSize.large,
+  classname,
+}: CardProps) => {
   return (
     <article
-      className={`${styles.container} ${theme && styles[`theme-${theme}`]} ${
-        borderRadiusSize && styles[`border-radius-${borderRadiusSize}`]
-      }`}
+      className={`${styles.container} ${classname && classname} ${
+        theme && styles[`theme-${theme}`]
+      } ${borderRadiusSize && styles[`border-radius-${borderRadiusSize}`]}`}
     >
       {header && (
         <>

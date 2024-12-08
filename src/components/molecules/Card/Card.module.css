@@ -2,12 +2,13 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: var(--mid-grey);
     padding: 20px;
+    margin-bottom: 15px;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .header h4 {
@@ -15,7 +16,7 @@
 }
 
 .body {
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .divider {

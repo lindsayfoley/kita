@@ -6,10 +6,10 @@ const headerText = "Student Projects";
 const bodyText = "No lesson projects";
 
 const props: CardProps = {
-  theme: Card.Theme.dark,
+  theme: Card.Theme.highlight,
   header: <h4>{headerText}</h4>,
   body: <span>{bodyText}</span>,
-  borderRadiusSize: Card.BorderRadiusSize.large,
+  borderRadiusSize: Card.BorderRadiusSize.small,
 };
 
 describe("Card", () => {
@@ -27,6 +27,11 @@ describe("Card", () => {
   it("Should render the card body", () => {
     render(<Card {...props} />);
     expect(screen.getByText(bodyText)).toBeVisible();
+  });
+
+  it("Should add a classname when passed in via props", () => {
+    render(<Card {...props} classname="test" />);
+    expect(screen.getByRole("article")).toHaveClass("test");
   });
 
   it.each(Object.values(Card.Theme))(
